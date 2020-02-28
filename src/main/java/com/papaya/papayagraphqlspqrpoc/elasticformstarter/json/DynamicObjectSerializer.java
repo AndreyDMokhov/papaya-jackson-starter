@@ -3,7 +3,7 @@ package com.papaya.papayagraphqlspqrpoc.elasticformstarter.json;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
-import com.papaya.startertest.model.FieldValue;
+import com.papaya.model.FieldValue;
 import lombok.SneakyThrows;
 import org.reflections.ReflectionUtils;
 

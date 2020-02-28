@@ -1,4 +1,4 @@
-package com.papaya.startertest.model;
+package com.papaya.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

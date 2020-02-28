@@ -2,9 +2,9 @@ package com.papaya.papayagraphqlspqrpoc.elasticformstarter.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
+import com.papaya.model.DynamicField;
 import com.papaya.papayagraphqlspqrpoc.elasticformstarter.json.DynamicObjectDeserializer;
 import com.papaya.papayagraphqlspqrpoc.elasticformstarter.json.DynamicObjectSerializer;
-import com.papaya.startertest.model.DynamicField;
 import org.reflections.Reflections;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

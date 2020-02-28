@@ -5,8 +5,8 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.fasterxml.jackson.databind.node.JsonNodeType;
-import com.papaya.startertest.model.FieldTemplate;
-import com.papaya.startertest.model.FieldValue;
+import com.papaya.model.FieldTemplate;
+import com.papaya.model.FieldValue;
 import lombok.SneakyThrows;
 import org.reflections.ReflectionUtils;
 
