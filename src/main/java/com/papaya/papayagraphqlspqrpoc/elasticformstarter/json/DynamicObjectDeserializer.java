@@ -22,6 +22,7 @@ import static java.util.stream.Collectors.toSet;
 
 public class DynamicObjectDeserializer<T> extends StdDeserializer<T> {
 
+    @SuppressWarnings("unchecked")
     private Set<String> fieldNames = ReflectionUtils.getAllFields(super._valueClass).stream().map(Field::getName).collect(toSet());
 
     public DynamicObjectDeserializer(Class vc) {
