@@ -7,6 +7,7 @@ import io.leangen.graphql.GraphQLSchemaGenerator;
 import io.leangen.graphql.generator.mapping.TypeMapper;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,14 +18,21 @@ import java.util.stream.Collectors;
 @Configuration
 public class GraphQLConfiguration {
 
+    @Value("${graphql.basepackage}")
+    private String basePackage;
+
     @Autowired
     private ApplicationContext context;
 
     @Bean
     public GraphQL graphQLConfig() {
 
+        if (basePackage == null || basePackage.equals("")) {
+            throw new RuntimeException("Don't use without base package in property");
+        }
+
         GraphQLSchemaGenerator graphQLSchemaGenerator = new GraphQLSchemaGenerator()
-                .withBasePackages("com.papaya.papayagraphqlspqrpoc")
+                .withBasePackages(basePackage)
                 .withTypeMappers(getTypeMappers());
 
         Map<Object, ? extends Class<?>> graphs = getGraphs();
